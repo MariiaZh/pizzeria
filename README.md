@@ -1,2 +1,2 @@
 # pizzeria
-Choose your favorite pizza, add your ingredients, if you want and order with form on JS 
+Choose your favorite pizza, add more ingredients and place your order using the form! 
