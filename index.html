@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--<div class="task">
+        <h3>Задание</h3>
+        <p>Разработайте страницу заказа пиццы.
+            Требования к странице:<br>
+            Можно заказать три вида пиццы – маленькая, большая, средняя.<br>
+            Можно самостоятельно выбрать ингредиенты к пицце – грибы, бекон, помидоры, сыр, оливки.<br>
+            На странице должна вводиться информация о покупателе (его телефон и адрес доставки).</p>
+        <p>Подумайте, какие данные следует проверять на странице, реализуйте эту проверку.
+            Также реализуйте подсчет стоимости пиццы, при выборе размеров и ингредиентов, автоматически должна
+            пересчитываться сумма заказа. Цены на размер пиццы и отдельные ингредиенты выберите произвольно.</p>
+    </div>-->
+    <div class="wrapper">
+        <header>
+            <img src="img/pizza-42443_1280.png" alt="">
+            <div class="cart goPay">
+                <img src="img/shopping-cart-304843_640.png" alt="cart">
+                <h1 id="cart" class="summ"></h1>
+
+            </div>
+            <div class="cart goPizza hidden">
+                <img src="img/pizza.png" alt="cart">
+                <h2 class="summ"> Choose more!</h2>
+            </div>
+
+
+        </header>
+        <main>
+            <div class="pizza">
+                <img>
+                <h1></h1>
+                <h5></h5>
+
+                <div class="sizewrap">
+                    <div class="size ">Small</div>
+                    <div class="size choice">Middle</div>
+                    <div class="size">Big</div>
+                </div>
+                <details>
+                    <summary> Add more ingredients:</summary>
+                    <label><input type="checkbox" value="mushrooms">mushrooms</label>
+                    <label><input type="checkbox" value="bacon">bacon</label>
+                    <label><input type="checkbox" value="tomatoes">tomatoes</label>
+                    <label><input type="checkbox" value="cheese">cheese</label>
+                    <label><input type="checkbox" value="olives">olives</label>
+                </details>
+                <div class="sumwrap">
+                    <h1 class="summ calculate"></h1>
+                    <input type="button" value="To cart">
+                    <input class="quantity hidden" type="number" min="0" max="100" value="1">
+                </div>
+            </div>
+            <div class="pizza">
+                <img>
+                <h1></h1>
+                <h5></h5>
+                <div class="sizewrap">
+                    <div class="size ">Small</div>
+                    <div class="size choice">Middle</div>
+                    <div class="size">Big</div>
+                </div>
+                <details>
+                    <summary> Add more ingredients:</summary>
+                    <label><input type="checkbox" value="mushrooms">mushrooms</label>
+                    <label><input type="checkbox" value="bacon">bacon</label>
+                    <label><input type="checkbox" value="tomatoes">tomatoes</label>
+                    <label><input type="checkbox" value="cheese">cheese</label>
+                    <label><input type="checkbox" value="olives">olives</label>
+                </details>
+                <div class="sumwrap">
+                    <h1 class="summ calculate"></h1>
+                    <input type="button" value="To cart">
+                    <input class="quantity hidden" type="number" min="0" max="100" value="1">
+                </div>
+            </div>
+            <div class="pizza">
+                <img>
+                <h1></h1>
+                <h5></h5>
+                <div class="sizewrap">
+                    <div class="size ">Small</div>
+                    <div class="size choice">Middle</div>
+                    <div class="size">Big</div>
+                </div>
+                <details>
+                    <summary> Add more ingredients:</summary>
+                    <label><input type="checkbox" value="mushrooms">mushrooms</label>
+                    <label><input type="checkbox" value="bacon">bacon</label>
+                    <label><input type="checkbox" value="tomatoes">tomatoes</label>
+                    <label><input type="checkbox" value="cheese">cheese</label>
+                    <label><input type="checkbox" value="olives">olives</label>
+                </details>
+                <div class="sumwrap">
+                    <h1 class="summ calculate"></h1>
+                    <input type="button" value="To cart">
+                    <input class="quantity hidden" type="number" min="0" max="100" value="1">
+                </div>
+            </div>
+            <div class="pizza">
+                <img>
+                <h1></h1>
+                <h5></h5>
+
+                <div class="sizewrap">
+                    <div class="size ">Small</div>
+                    <div class="size choice">Middle</div>
+                    <div class="size">Big</div>
+                </div>
+                <details>
+                    <summary> Add more ingredients:</summary>
+                    <label><input type="checkbox" value="mushrooms">mushrooms</label>
+                    <label><input type="checkbox" value="bacon">bacon</label>
+                    <label><input type="checkbox" value="tomatoes">tomatoes</label>
+                    <label><input type="checkbox" value="cheese">cheese</label>
+                    <label><input type="checkbox" value="olives">olives</label>
+                </details>
+                <div class="sumwrap">
+                    <h1 class="summ calculate"></h1>
+                    <input type="button" value="To cart">
+                    <input class="quantity hidden" type="number" min="0" max="100" value="1">
+                </div>
+            </div>
+        </main>
+
+        <form class="clientForm hidden">
+            <h1>Your Order</h1>
+
+            <div class="form">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" required autofocus>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="city">City:</label>
+                <select id="city">
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Kharkiv">Kharkiv</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="Poltava">Poltava</option>
+                    <option value="Odesa">Odesa</option>
+                </select>
+
+                <label for="adress">Adress:</label>
+                <input type="text" id="adress" required>
+
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" required placeholder="+38(0xx)xxx-xx-xx"
+                    pattern="[+]38[(]0[0-9]{2}[)][0-9]{3}-[0-9]{2}-[0-9]{2}">
+            </div>
+
+            <table class="orderList">
+                <thead>
+                    <tr>
+                        <td>Pizza</td>
+                        <td>Size</td>
+                        <td>Additions</td>
+                        <td>Quantity</td>
+                        <td>Summ</td>
+                        <td>Reset</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6"></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="inputwrap">
+                <input type="submit" value="Сheckout">
+            </div>
+
+        </form>
+
+        <footer>&#169; &#9753; Primula Moss &#10087; 2021 </footer>
+    </div>
+
+    <script src="js/pizzeria.js"></script>
+</body>
+
+</html>
